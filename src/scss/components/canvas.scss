@@ -1,0 +1,9 @@
+.canvas {
+    width: 300px;
+    height: 460px;
+    background-color: yellowgreen;
+    
+    position: relative;
+    top: 50%; left: 10px; 
+    transform: translateY(-50%);
+}
