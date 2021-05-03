@@ -9,8 +9,8 @@ const unityContext = new UnityContext({
 });
 
 unityContext.on('canvas', (canvas) => {
-    canvas.width = 320;
-    canvas.height = 240;
+    canvas.width = 720;
+    canvas.height = 480;
 });
 const sizeUp = () => {
     unityContext.send('TestChar', 'SizeUp');
@@ -22,12 +22,10 @@ const Hi = (props) => {
     
     return(
         <>
-        <div width='320' height='240'>
-            <Unity 
-                unityContext={unityContext}
-                matchWebGLToCanvasSize={false}
-            />    
-        </div>
+        <Unity 
+            unityContext={unityContext}
+            matchWebGLToCanvasSize={false}
+        />    
         <input type='button' value='increase' onClick={sizeUp}></input>
         <input type='button' value='decrease' onClick={sizeDown}></input>
         </>
