@@ -1,11 +1,12 @@
-import { Board } from './components';
-
+import { Canvas, Hi } from './components';
+import { Route } from 'react-router-dom';
 import './scss/main.scss';
 
 const App = () => {
   return (
     <div className="App">
-      <Board />
+      <Route exact path='/' component={Hi} />
+      <Route path='/about' component={Canvas} />
     </div>
   );
 }
